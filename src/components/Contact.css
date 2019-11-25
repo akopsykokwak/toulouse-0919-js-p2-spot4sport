@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css?family=BenchNine&display=swap');
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+  margin-top: 60px;
+}
+
+.intro {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-align: center;
+}
+
+.intro p {
+  font-family: 'BenchNine', sans-serif;
+  font-size: 20px;
+  margin-bottom: 0%;
+}
+
+label.label-form-contact {
+  margin-bottom: 3px;
+}
+
+div.formGroup-contact.form-group {
+  margin-top: 12px;
+}
+
+div.form-sous-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px;
+}
+
+.intro h2 {
+  margin-top: 5px;
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-control {
+  width: 70%;
+}
+
+a.btn.btn-outline-danger {
+  width: 30%;
+}
+
+input.text-area.form-control {
+  text-align: center;
+  width: 70%;
+}
+
+input.text-area-email.form-control {
+  text-align: center;
+  width: 70%;
+}
+
+textarea.text-area.form-control {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .form-container {
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+  div.form-sous-container {
+    background-color: white;
+    border-radius: 16px;
+    padding: 10px;
+  }
+  form.form-contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .intro h2 {
+    font-size: 35px;
+  }
+  .intro p {
+    font-size: 25px;
+  }
+  label.label-form-contact {
+    font-size: 20px;
+  }
+  .formGroup-contact {
+    display: flex;
+  }
+  div.line {
+    display: flex;
+    flex-direction: row;
+  }
+  a.btn.btn-outline-danger {
+    font-size: 25px;
+  }
+}

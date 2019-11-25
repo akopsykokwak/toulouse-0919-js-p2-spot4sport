@@ -1,4 +1,14 @@
-li {
+.sportList-font-size {
   list-style-type: none;
-  padding: 1em 1em 0.5em 6em;
+  padding: 1em 1em 0.5em 4em;
+}
+@media screen and (min-width: 768px) {
+  .sportlist-css-mapsearchbar {
+    position: relative;
+    left: 200px;
+    height: 80px;
+  }
+  .sportList-font-size {
+    font-size: 20px;
+  }
 }

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css?family=BenchNine&display=swap');
+
+.title-help-page {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-align: center;
+}
+
+.subtitle-help-page {
+  font-family: 'BenchNine', sans-serif;
+  text-align: center;
+}
+
+.help-container {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  height: 90vh;
+}
+
+.question {
+  font-family: 'BenchNine', sans-serif;
+  text-align: start;
+  color: #c84c4b;
+  font-size: 20px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.answer {
+  font-family: 'BenchNine', sans-serif;
+  text-align: start;
+  font-size: 16px;
+}
+
+.question-answer {
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.letter-question {
+  font-size: 25px;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: #c84c4b;
+}
+
+.help-sous-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button.btn.btn-outline-danger {
+  width: 60%;
+}
+
+@media only screen and (min-width: 768px) {
+  .help-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 0px;
+  }
+  .help-sous-container {
+    background-color: white;
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .answer {
+    font-size: 20px;
+  }
+
+  .question {
+    font-size: 25px;
+  }
+}

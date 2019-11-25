@@ -29,7 +29,11 @@ const Burger = props => {
         </DropdownItem>
         <DropdownItem>ABOUT</DropdownItem>
         <DropdownItem>HELP</DropdownItem>
-        <DropdownItem>CONTACT US</DropdownItem>
+        <DropdownItem>
+          <NavLink to="/contact" className="burgerLink">
+            CONTACT US
+          </NavLink>
+        </DropdownItem>
       </DropdownMenu>
     </Dropdown>
   );

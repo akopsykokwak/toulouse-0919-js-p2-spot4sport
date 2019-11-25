@@ -1,0 +1,30 @@
+.suggestion {
+  border: 2px solid #c84c4b;
+  border-top-width: 0;
+  height: auto;
+  margin-top: 0;
+  margin-left: 0;
+  overflow-y: auto;
+  padding: 0.5em;
+  width: calc(250px - 1rem);
+  background-color: white;
+}
+
+.suggestions:active {
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .suggestion {
+    border: 1px solid #c84c4b;
+    height: 2rem;
+    padding: 0 0 0 0.5rem;
+    width: calc(300px - 1rem);
+  }
+
+  .suggestion:hover {
+    color: white;
+    background: #c84c4b;
+    font-weight: bold;
+  }
+}

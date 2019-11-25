@@ -1,0 +1,9 @@
+.map-page-container {
+  margin-top: 65px;
+}
+
+@media only screen and (min-width: 768px) {
+  .map-page-container {
+    margin-top: 0;
+  }
+}

@@ -1,5 +1,6 @@
 html,
 body {
+  height: 100vh;
   margin: 0;
 }
 
@@ -17,7 +18,7 @@ body {
 }
 
 .bm-item:hover {
-  color: white;
+  color: #c84c4b;
 }
 
 .bm-burger-button {
@@ -42,9 +43,14 @@ body {
   background: black;
 }
 
+div.bm-menu-wrap {
+  height: 150vh !important;
+}
+
 .bm-menu {
   display: flex;
-  margin-top: -10%;
+  padding-bottom: 10%;
+  margin-top: -14%;
   background: white;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
@@ -59,7 +65,13 @@ body {
   color: black;
 }
 
+div.bm-overlay {
+  height: 150vh !important;
+  margin-top: -10% !important;
+}
+
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
-  margin-top: -8%;
+  padding: 5%;
+  margin-top: -11%;
 }

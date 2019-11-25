@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-scroll';
 import SportsListFormatted from './SportsListFormatted';
 import './SportsProvider.css';
+import { Button } from 'reactstrap';
+import SportsSearchBar from './SportsSearchBar';
 
 class SportsProvider extends React.Component {
   constructor(props) {
@@ -71,8 +73,10 @@ class SportsProvider extends React.Component {
       letter.match(filterOutNumber)
     );
     const mySportsListSorted = filteredAlphabet.sort().map(letter => (
-      <div>
-        <h4 name={letter}>{letter}</h4>
+      <div className="desktop-list">
+        <h4 className="sport-alphabet-letters" name={letter}>
+          {letter}
+        </h4>
         <SportsListFormatted sports={allMySportsInfos[letter].sort()} />
       </div>
     ));
@@ -86,15 +90,7 @@ class SportsProvider extends React.Component {
     }
     const gettingScroll = letterArr.map(letter => {
       return (
-        <Link
-          activeClass="active"
-          to={letter}
-          spy
-          smooth
-          offset={-70}
-          duration={500}
-          style={{ fontSize: '16px' }}
-        >
+        <Link activeClass="active" to={letter} spy smooth offset={-70} duration={500}>
           {letter}
         </Link>
       );
@@ -104,12 +100,24 @@ class SportsProvider extends React.Component {
 
   render() {
     return (
-      <div className="sportsProvider-container">
-        <div className="list-sports">
-          <this.sportsSorted />
+      <div className="sport-fullpage-container">
+        <div className="sportsSearchBar-container">
+          <SportsSearchBar results={this.state.sports} />
         </div>
-        <div className="link-alphabet">
-          <this.scrolledList />
+        <div className="sportsProvider-container">
+          <div className="list-sports">
+            <this.sportsSorted />
+            <Button className="anchorLink" color="link" type="button">
+              <a href="#anchor-sport">
+                SPOT
+                <span className="anchorFour">4</span>
+                SPORT
+              </a>
+            </Button>
+          </div>
+          <div className="link-alphabet">
+            <this.scrolledList />
+          </div>
         </div>
       </div>
     );

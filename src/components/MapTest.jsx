@@ -5,7 +5,6 @@ import 'leaflet/dist/leaflet.css';
 import './MapTest.css';
 import axios from 'axios';
 import MapSportPlaceMarkerLayer from './MapSportPlaceMarkerLayer';
-import MapCheckbox from './MapCheckbox';
 
 const myIcon = L.icon({
   iconUrl: 'https://image.noelshack.com/fichiers/2019/44/3/1572430557-logomap.png',
@@ -76,7 +75,7 @@ class MapTest extends React.Component {
     const finalZoom = isUserLocation ? this.state.zoom : this.props.zoomCity;
     const finalCenter = isUserLocation ? position : this.props.cityCenter;
     return (
-      <div>
+      <div className="map-container">
         <Map className="map" zoom={finalZoom} center={finalCenter}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -92,7 +91,6 @@ class MapTest extends React.Component {
           {this.state.dataMarkers && (
             <MapSportPlaceMarkerLayer dataMarkers={this.state.dataMarkers} />
           )}
-          <MapCheckbox />
         </Map>
       </div>
     );

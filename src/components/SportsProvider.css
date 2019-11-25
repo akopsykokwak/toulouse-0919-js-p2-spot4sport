@@ -1,32 +1,122 @@
-h4 {
+.sport-alphabet-letters {
   color: #c84c4b;
   margin: 0 3em;
-  padding: 0.5em;
+  margin-top: 1em;
 }
-​ .hr {
+.anchorLink {
+  visibility: hidden;
+}
+​.hr {
   border: 1px solid #c84c4b;
   margin: 0 3em;
 }
+.sport-fullpage-container {
+  margin-top: 60px;
+}
 .sportsProvider-container {
   display: flex;
+  min-height: 100vh;
 }
 .link-alphabet {
   display: flex;
   flex-direction: column;
+  top: 60px;
   right: 10px;
-  bottom: 20px;
+  bottom: 60px;
   position: fixed;
 }
-.alphabet-size {
-  font-family: 16px;
+div.link-alphabet a {
+  font-size: 17px;
 }
 .list-sports {
   align-self: flex-start;
 }
 
+@media screen and (max-height: 700px) {
+  div.link-alphabet a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-height: 600px) {
+  div.link-alphabet a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-height: 570px) {
+  div.link-alphabet a {
+    font-size: 12px;
+  }
+}
+
 @media screen and (min-width: 768px) {
-  .link-alphabet {
+  .sport-fullpage-container {
+    margin-top: 20px;
     display: flex;
-    align-self: flex-start;
+    flex-direction: column;
+  }
+  .sportsProvider-container {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+  .desktop-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .link-alphabet {
+    flex-direction: row;
+    top: 90px;
+    bottom: 1050px;
+    position: fixed;
+    margin: 0;
+  }
+  div.link-alphabet a {
+    font-size: 28px;
+    padding: 1.5px;
+  }
+  .list-sports {
+    margin-left: 40px;
+  }
+  .anchorLink {
+    position: fixed;
+    visibility: visible;
+    bottom: 70px;
+    right: 25px;
+    width: 200px;
+    height: 70px;
+  }
+  .anchorLink a {
+    color: black;
+    font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
+    font-style: bold;
+    font-size: 44px;
+  }
+  .anchorLink a:link,
+  .anchorLink a:hover,
+  .anchorLink a:active,
+  .anchorLink a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  .anchorFour {
+    font-size: 50px;
+    color: #c84c4b;
+    font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
+  }
+  .sportlist-css-mapsearchbar {
+    margin-left: 100px;
+  }
+
+  .sport-alphabet-letters {
+    color: black;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .link-alphabet {
+    margin-right: 2em;
+  }
+  div.link-alphabet a {
+    font-size: 28px;
+    padding: 3px;
   }
 }

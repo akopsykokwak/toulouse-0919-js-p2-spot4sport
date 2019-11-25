@@ -15,11 +15,11 @@ function BurgerMenu() {
       </NavLink>
 
       <NavLink to="/map" className="burgerLink">
-        MAP
+        SPOT
       </NavLink>
 
-      <NavLink to="/about" className="burgerLink">
-        ABOUT
+      <NavLink to="/aboutus" className="burgerLink">
+        ABOUT US
       </NavLink>
 
       <NavLink to="/help" className="burgerLink">

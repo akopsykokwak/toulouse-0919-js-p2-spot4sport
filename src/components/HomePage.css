@@ -1,7 +1,10 @@
 .homePageBody {
-  height: 100vh;
   margin: 0;
+  margin-top: 60px;
   padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .homePageDivMap {
@@ -10,11 +13,12 @@
   justify-content: center;
   flex-direction: column;
   background: #c84c4b;
-  height: 45%;
+  height: 43vh;
 }
 
 .homePageDivMap h4 {
   color: white;
+  font-size: 30px;
 }
 
 .homePageDivSport {
@@ -23,11 +27,12 @@
   justify-content: center;
   flex-direction: column;
   background: white;
-  height: 50%;
+  min-height: 43vh;
 }
 
 .homePageDivSport h4 {
   color: #c84c4b;
+  font-size: 30px;
 }
 
 .homePageIcon {
@@ -35,7 +40,38 @@
   width: 20%;
   padding: 1em 0;
 }
+
 .homePageLinks:link,
 .homePageLinks:hover {
   text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .homePageBody {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .homePageDivMap {
+    margin: 21vh 10vh;
+    border-radius: 5px;
+  }
+
+  .homePageDivSport {
+    margin: 21vh 10vh;
+    border-radius: 5px;
+  }
+
+  .backgroundImage {
+    background-image: url('./images/backgroundImageDesktop.jpg');
+    width: 100%;
+    height: 738px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

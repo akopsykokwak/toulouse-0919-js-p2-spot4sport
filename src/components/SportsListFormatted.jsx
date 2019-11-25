@@ -13,10 +13,12 @@ function SportsListFormatted(props) {
     return (
       <>
         <div onClick={() => setSelectedSport(sport.sportId)} role="presentation">
-          <li key={notAnIndex}>{sport.sportName}</li>
+          <li className="sportList-font-size" name={sport.sportName} key={notAnIndex}>
+            {sport.sportName}
+          </li>
         </div>
         {selectedSport === sport.sportId && (
-          <div>
+          <div className="sportlist-css-mapsearchbar">
             <SearchBar
               id={sport.sportId}
               handleSearch={e => setCity(e.target.value)}

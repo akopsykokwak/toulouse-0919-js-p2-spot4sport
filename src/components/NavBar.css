@@ -1,45 +1,109 @@
-.navLogo,
-.burger {
-  height: 80px;
-  width: 80px;
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+.navLogo {
+  height: 50px;
+  width: 50px;
 }
-
 .navFour {
-  font-size: 50px;
+  font-size: 40px;
   color: #c84c4b;
   font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
 }
-
+.burger {
+  width: 50px;
+}
 .navContainer {
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 60px;
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
-  margin-right: 1em;
+  background-color: white;
+  z-index: 1000;
+  position: fixed;
 }
 .logoLink {
   font-family: 'Exo 2', 'Yanone Kaffeesatz', sans-serif;
-  font-size: 1em;
   margin: 0%;
   font-style: bold;
   color: black;
+  font-size: 30px;
+  margin: 0%;
 }
 .logoLink:link,
 .logoLink:hover {
   text-decoration: none;
   color: black;
 }
-
-@media only screen and (max-width: 767px) and (orientation: portrait) {
+div.bm-overlay {
+  margin-top: 0;
+}
+div.bm-burger-button {
+  margin-top: 0;
+  margin-left: 0;
+  top: 15px;
+  left: 15px;
+}
+.navbar-desktop {
+  display: none;
+}
+.desktop-line {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
   .navLogo {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
+    margin-bottom: 8px;
   }
   .logoLink {
-    font-size: 30px;
-    margin: 0%;
+    font-size: 1.1em;
+    margin-left: 25px;
   }
   .navFour {
-    font-size: 40px;
+    font-size: 50px;
+  }
+  img.navLogo {
+    margin-left: 15px;
+  }
+  .navContainer {
+    position: static;
+    flex-direction: row-reverse;
+  }
+  .burger {
+    display: none;
+  }
+  .navbar-desktop {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  .navlink-desktop,
+  .navlink-desktop:link,
+  .navlink-desktop:hover {
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 28px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  .navlink-desktop.active {
+    color: #c84c4b;
+  }
+  .desktop-line {
+    display: block;
+    margin: 0;
+    border-top: 2px solid #c84c4b;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .navbar-desktop,
+  .navlink-desktop:link,
+  .navlink-desktop:hover {
+    font-size: 32px;
+    padding-right: 15px;
   }
 }

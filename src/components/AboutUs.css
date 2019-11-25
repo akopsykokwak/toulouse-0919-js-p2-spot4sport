@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+@import url('https://fonts.googleapis.com/css?family=BenchNine&display=swap');
+
+.about-us-page {
+  background-color: #e5e5e5;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-page h1 {
+  align-self: center;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  margin: 5% 0;
+}
+
+.about-us-page p {
+  font-size: 22px;
+}
+
+.about-us-container h2 {
+  color: #c84c4b;
+  margin-left: 2%;
+}
+
+.about-us-container p {
+  text-align: justify;
+  font-family: 'BenchNine', sans-serif;
+}
+
+.about-us-wcs,
+.about-us-techno,
+.about-us-links {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 2%;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-container > img {
+  max-width: 125px;
+  align-self: center;
+}
+
+.wcs-description {
+  margin: 0 4%;
+}
+
+.tech-logos {
+  width: 125px;
+  height: auto;
+}
+
+.techno-first-line,
+.techno-second-line {
+  display: flex;
+  margin: 2% 0;
+  justify-content: center;
+}
+
+.techno-first-line p,
+.techno-second-line p {
+  text-align: center;
+}
+
+.tech-paragraph {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+}
+
+.profile-description {
+  display: flex;
+  margin: 5% 0 5% 5%;
+}
+
+.profile-pic {
+  width: 150px;
+  height: auto;
+}
+
+.profile-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8%;
+}
+
+.profile-links a:hover {
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us-page {
+    background-color: transparent;
+  }
+
+  .about-us-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  .about-us-page h1 {
+    display: none;
+  }
+
+  .about-us-wcs {
+    padding: 20px;
+    width: 40%;
+  }
+
+  .about-us-links {
+    padding: 20px;
+  }
+
+  .about-us-wcs,
+  .about-us-techno,
+  .about-us-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-left: 3%;
+  }
+
+  .intro-container,
+  .profile-first-line,
+  .profile-second-line {
+    padding: 10px;
+    background-color: white;
+  }
+
+  .intro-container {
+    border-radius: 10px;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    padding-right: 3%;
+  }
+
+  .about-us-techno {
+    order: 1;
+    width: 100%;
+  }
+
+  .tech-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .techno-first-line {
+    display: flex;
+    justify-items: center;
+  }
+
+  .tech-paragraph {
+    margin: 0 55%;
+  }
+
+  #techno-used {
+    color: black;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .profile-first-line {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .profile-second-line {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .profile-first-line,
+  .profile-second-line {
+    width: 25vw;
+  }
+}

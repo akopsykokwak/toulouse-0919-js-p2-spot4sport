@@ -3,6 +3,8 @@ import axios from 'axios';
 import SearchBar from './SearchBar';
 import MapTest from './MapTest';
 import ApiKey from './Key';
+import './MapPage.css';
+import Footer from './Footer';
 
 class MapPage extends React.Component {
   constructor(props) {
@@ -76,20 +78,26 @@ class MapPage extends React.Component {
     const { dataSearched } = this.state;
     const { city } = this.state;
     const isFinder = dataSearched && this.isPlaces();
-    const center = isFinder ? isFinder.geometry : [-0.09, 51.505];
+    const center = isFinder ? isFinder.geometry : [0, 0];
     const geometryInput = Object.values(center);
     const inputReversed = geometryInput.reverse();
     const finalConst = inputReversed.toString();
-    const zoom = isFinder ? 12 : 3;
+    const zoom = isFinder ? 12 : 2;
     return (
-      <div>
-        <SearchBar dataInput={this.handleGoClick} city={city} handleSearch={this.handleSearch} />
+      <div className="map-page-container">
+        <SearchBar
+          id="searchbar-item"
+          dataInput={this.handleGoClick}
+          city={city}
+          handleSearch={this.handleSearch}
+        />
         <MapTest
           cityCenter={center}
           zoomCity={zoom}
           geometryInput={finalConst}
           sportId={this.props.match.params.sportId}
         />
+        <Footer />
       </div>
     );
   }

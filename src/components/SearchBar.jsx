@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Button, Form, Input } from 'reactstrap';
+import searchLogo from './images/search.png';
 import './SearchBar.css';
 
 class SearchBar extends React.Component {
@@ -25,13 +26,15 @@ class SearchBar extends React.Component {
     const { city } = this.props;
     const { handleSearch } = this.props;
     return (
-      <div>
-        <Form onSubmit={this.handleSubmit}>
-          <Input type="search" placeholder="Search a Spot" value={city} onChange={handleSearch} />
-          <Button outline color="danger" type="submit">
-            Search
-          </Button>
-        </Form>
+      <div className="first-container">
+        <div className="searchbar-container">
+          <Form onSubmit={this.handleSubmit}>
+            <Input type="search" placeholder="Your spot" value={city} onChange={handleSearch} />
+            <Button id="search-button" type="submit">
+              <img id="search-logo" src={searchLogo} alt="glass" />
+            </Button>
+          </Form>
+        </div>
       </div>
     );
   }

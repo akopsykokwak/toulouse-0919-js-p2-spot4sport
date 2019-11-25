@@ -7,26 +7,37 @@ div.map.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-t
   z-index: 2;
 }
 
+.map-container {
+  height: 69vh;
+}
+
 .map {
   display: flex;
-  height: 480px;
+  height: 100%;
   width: 90%;
-  border-radius: 25px;
+  border-radius: 15px;
   display: flex;
   align-content: center;
   margin-left: 5%;
   margin-bottom: 5%;
 }
 
-@media only screen and (max-width: 767px) and (orientation: portrait) {
+#toggler {
+  background-color: #c84c4b;
+  border: #c84c4b;
+}
+
+@media only screen and (min-width: 768px) {
+  .map-container {
+    height: 77vh;
+  }
   .map {
     display: flex;
-    height: 350px;
     width: 90%;
-    border-radius: 25px;
+    height: 95%;
+    border-radius: 15px;
     display: flex;
     align-content: center;
-    margin-left: 5%;
-    margin-bottom: 5%;
+    margin-top: 3%;
   }
 }
